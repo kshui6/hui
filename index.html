@@ -1,121 +1,36 @@
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2.0">
-            <TextView
-                android:textSize="40sp"
-                android:typeface="sans"
-                android:textColor="#FFFFFFFF"
-                android:gravity="center|left|top"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="30dp"
-                android:text="Hello."
-                android:shadowColor="#C0000000"
-                android:shadowDx="3.0"
-                android:shadowDy="3.0"
-                android:shadowRadius="1.0"
-                android:layout_weight="1.0" />
-            <TextView
-                android:textSize="15sp"
-                android:typeface="serif"
-                android:textColor="#B1FFFFFF"
-                android:gravity="center|left|top"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="-145dp"
-                android:text="今天又是美好的一天呀~"
-                android:shadowColor="#C0000000"
-                android:shadowDx="3.0"
-                android:shadowDy="3.0"
-                android:shadowRadius="1.0"
-                android:layout_weight="1.0" />
-            <TextClock
-          <TextClock
-                android:textSize="28sp"
-                android:typeface="serif"
-                android:textColor="#B3FFFFFF"
-                android:gravity="center|right|top"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="-50dp"
-                android:layout_marginRight="40dp"
-                android:text=""
-                android:shadowColor="#C0000000"
-                android:shadowDx="3.0"
-                android:shadowDy="3.0"
-                android:shadowRadius="1.0"
-                android:layout_weight="1.0"
-                android:format12Hour="
-                MM/dd
-                hh:mm:ss"
-                android:format24Hour="
-                MM/dd
-                HH:mm:ss" />
-        </LinearLayout>
-      <LinearLayout
-            android:gravity="center|left"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_weight="1.0">
-            <android.fix.TextView
-                android:textSize="20sp"
-                android:textColor="#FFFFFFFF"
-                android:gravity="center|left"
-                android:id="@id/btn_start_usage"
-                android:layout_width="68dp"
-                android:layout_height="68dp"
-                android:layout_marginLeft="60dp"
-                android:layout_marginBottom="-10dp"
-                android:text="开始" />
-            <android.fix.TextView
-                android:textSize="20sp"
-                android:textColor="#FFFFFFFF"
-                android:gravity="center|left"
-                android:id="@id/btn_stop_service"
-                android:layout_width="68dp"
-                android:layout_height="68dp"
-                android:layout_marginLeft="60dp"
-                android:layout_marginBottom="-10dp"
-                android:text="退出" />
-            <LinearLayout
-                android:gravity="center|left"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_weight="1.0">
-                <TextView
-android:textSize="12sp"
-                    android:textColor="#FFFFFFFF"
-                    android:gravity="bottom|center|right"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:text="把你归还给人海，是清醒，也是知趣。"
-                    android:shadowColor="#C0000000"
-                    android:shadowDx="3.0"
-                    android:shadowDy="3.0"
-                    android:shadowRadius="1.0" />
-                <TextView
-                    android:textSize="12sp"
-                    android:textColor="#FFFFFFFF"
-                    android:gravity="bottom|center|right"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="120dp"
-                    android:text="愿你余生有酒、有她，而我一人浪迹天涯。"
-                    android:shadowColor="#C0000000"
-                    android:shadowDx="3.0"
-                    android:shadowDy="3.0"
-                    android:shadowRadius="1.0" />
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>随机输出字符串</title>
+<script>
+function randomString() {
+  // 生成一个1到3的随机整数
+  var randomNumber = Math.floor(Math.random() * 3) + 1;
+  // 根据随机数输出对应的字符串
+  var outputString = "";
+  switch(randomNumber) {
+    case 1:
+      outputString = "1";
+      break;
+    case 2:
+      outputString = "2";
+      break;
+    case 3:
+      outputString = "3";
+      break;
+    default:
+      outputString = "未知错误";
+      break;
+  }
+  // 将字符串显示在页面上
+  document.getElementById("randomOutput").innerText = outputString;
+}
+</script>
+</head>
+<body onload="randomString()">
+<h1>随机输出结果：</h1>
+<p id="randomOutput"></p>
+</body>
+</html>
