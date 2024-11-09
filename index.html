@@ -3,30 +3,26 @@
 <html lang="zh">
 <head>
 <meta charset="UTF-8">
-<title>随机字符串生成</title>
+<title>随机输出特定字符串</title>
 <script>
-function generateRandomString() {
-  var length = 10; // 定义随机字符串的长度
-  var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; // 定义随机字符串的字符集
-  var randomString = "";
-  for (var i = 0; i < length; i++) {
-    randomString += charset.charAt(Math.floor(Math.random() * charset.length));
-  }
-  return randomString;
+function getRandomString(strings) {
+  // 从字符串数组中随机选择一个字符串
+  var index = Math.floor(Math.random() * strings.length);
+  return strings[index];
 }
 
-// 当页面加载完毕时，直接显示随机字符串
+// 当页面加载完毕时，随机选择并显示一个字符串
 window.onload = function() {
-  var randomString = generateRandomString();
+  var strings = ["你好", "辉", "哈哈", "一样"]; // 字符串数组
+  var randomString = getRandomString(strings);
   document.getElementById("randomString").textContent = randomString;
 };
 </script>
 </head>
 <body>
 
-<!-- 移除了按钮和额外的文字，只保留显示随机字符串的段落 -->
+<!-- 显示随机选择的字符串 -->
 <p id="randomString"></p>
 
 </body>
 </html>
-o
