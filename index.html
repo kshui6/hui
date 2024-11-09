@@ -1,1 +1,32 @@
-愿你在4年后仍然自洁高尚不会像他们一样...
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>随机字符串生成</title>
+<script>
+function generateRandomString() {
+  var length = 10; // 定义随机字符串的长度
+  var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; // 定义随机字符串的字符集
+  var randomString = "";
+  for (var i = 0; i < length; i++) {
+    randomString += charset.charAt(Math.floor(Math.random() * charset.length));
+  }
+  return randomString;
+}
+
+// 当页面加载完毕时，直接显示随机字符串
+window.onload = function() {
+  var randomString = generateRandomString();
+  document.getElementById("randomString").textContent = randomString;
+};
+</script>
+</head>
+<body>
+
+<!-- 移除了按钮和额外的文字，只保留显示随机字符串的段落 -->
+<p id="randomString"></p>
+
+</body>
+</html>
+o
